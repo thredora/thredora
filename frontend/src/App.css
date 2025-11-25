@@ -1,0 +1,174 @@
+/* Thredora Landing Page Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.App {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+/* Hero section gradient background */
+.hero-gradient {
+    background: linear-gradient(180deg, #A891E8 0%, #8B6FD9 100%);
+}
+
+/* Navigation glassmorphism */
+.nav-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hero card styling - semi-transparent white */
+.hero-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+}
+
+/* Ensure text box has rounded corners and padding */
+.text-container {
+    border-radius: 1.5rem !important;
+    padding: 2rem !important;
+}
+
+/* Responsive backdrop blur for hero card */
+.hero-card-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Tablet blur - slightly reduced */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-card-blur {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+/* Desktop blur - significantly reduced */
+@media (min-width: 1024px) {
+    .hero-card-blur {
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+}
+
+
+/* CTA button gradient */
+.cta-gradient {
+    background: linear-gradient(135deg, #F4E86D 0%, #D4E157 100%);
+    box-shadow: 0 8px 24px rgba(244, 232, 109, 0.3);
+}
+
+.cta-gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(244, 232, 109, 0.4);
+}
+
+/* Typography classes - all serif */
+.serif-font {
+    font-family: 'Libre Caslon Text', serif;
+}
+
+/* Decorative wave animations */
+.wave-animation {
+    animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive background positioning */
+.bg-responsive {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mobile navigation adjustments */
+@media (max-width: 768px) {
+    .nav-glass {
+        padding: 0.5rem 1rem;
+    }
+    
+    .hero-card {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    /* Mobile text box adjustments */
+    .mobile-text-box {
+        max-width: 95vw !important;
+        width: 95vw !important;
+        margin: 0 auto;
+        padding: 1.5rem !important;
+        border-radius: 1.5rem !important;
+    }
+    
+    /* Ensure rounded corners on mobile */
+    .rounded-3xl {
+        border-radius: 1.5rem !important;
+    }
+    
+    /* Mobile hero section centering */
+    .mobile-hero-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* Hover effects */
+.nav-link:hover {
+    color: #7C60C7;
+    transform: translateY(-1px);
+}
+
+/* Focus accessibility */
+.focus-visible:focus {
+    outline: 2px solid #ABA728;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Ensure everything uses serif font */
+* {
+    font-family: 'Libre Caslon Text', serif !important;
+}
+
+/* Color classes for easy reference */
+.text-thredora-purple {
+    color: #7C60C7;
+}
+
+.text-thredora-lime {
+    color: #ABA728;
+}
+
+.text-thredora-gray {
+    color: #525A71;
+}
+
+/* Allow vertical scrolling, prevent horizontal scrolling */
+html, body, #root {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
